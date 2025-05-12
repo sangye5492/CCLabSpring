@@ -83,7 +83,7 @@ function draw() {
   }
   console.log("z", z);
 
-  drawAxes(1000); // draw the helper x, y, z axes
+ // drawAxes(1000); // draw the helper x, y, z axes
 }
 
 class PixelImage {
