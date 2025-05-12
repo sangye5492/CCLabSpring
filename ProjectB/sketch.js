@@ -1,23 +1,32 @@
 let filenames = [
   "knockout.PNG",
-  "knockout1.PNG",
+  "knockout0.PNG",
   "knockout2.PNG",
   "knockout3.PNG",
   "knockout4.PNG",
   "knockout5.PNG",
   "knockout6.PNG",
   "knockout7.PNG",
-  "knockout8.PNG",
+  "knockoutcopy2.PNG",
   "knockout9.PNG",
   "knockout10.PNG",
-  "knockout11.PNG",
+  "knockout12.PNG",
+  "knockout13.PNG",
+  "knockout14.PNG",
+  "knockout15.PNG",
+  "knockout16.PNG",
+  "knockout17.PNG",
+  "knockoutcopy.PNG",
+  "knockout8.PNG",
+  "IMG.png",
+  "knockout1.PNG"
 ];
 
 let images = [];
 let imagesY = [];
 let imagesZ = [];
 let pixelImages = [];
-let s = 30; // keeping your original size
+let s = 21; // keeping your original size
 let zoomZ = 0;
 let offsetX = 0;
 let offsetY = 0;
@@ -67,6 +76,7 @@ function setup() {
   let far = 10000; // <-- increase this for deeper scenes
 
   perspective(fov, aspect, near, far);
+
 }
 
 
@@ -112,15 +122,6 @@ class PixelImage {
 
     for (let p of this.pixels) {
       let d = dist(mouseX, mouseY, p.x, p.y);
-      //let z = map(d, 0, width*2, 0, 1000);
-      // let z = 0;
-      // if (mouseY <= height / 2 - 100) {
-      //   z = map(p.b, 0, 255,  height - mouseY, 0);
-      // } else if (mouseY >= height / 2 + 100) {
-      //   z = map(p.b, 0, 255, 0, mouseY);
-      // } else {
-      //   z = lerp(z, -100, 0.1);
-      // }
       let mapY = map(mouseY, 0, height, 0, PI, true);
       let cosVal = cos(mapY);
       let z = map(p.b, 0, 255, cosVal * height, 0);
