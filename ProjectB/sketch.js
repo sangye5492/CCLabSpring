@@ -1,6 +1,6 @@
 let filenames = [
   "knockout.PNG",
-  "knockout0.PNG",
+  "Knockout0.PNG",
   "knockout2.PNG",
   "knockout3.PNG",
   "knockout4.PNG",
